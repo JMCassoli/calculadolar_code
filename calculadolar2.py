@@ -90,13 +90,14 @@ def print(text):
 def calculate(t):
     global calculate_done
     display_state = display.get()
-    input = int(display_state)
-    if (t==0):
+    input = float(display_state)
+    if (t==0): # dolar a peso
         result = input * dolar
         print(result)
         calculate_done = True
-    else:
+    else: # peso a dolar
         result = input / dolar
+        result = "{:.2f}".format(result)
         print(result)
         calculate_done = True
 
